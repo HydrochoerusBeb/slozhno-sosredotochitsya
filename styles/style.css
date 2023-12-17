@@ -3,3 +3,599 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header__theme-menu-button{
+  background-color: transparent;
+  border: none;
+  padding: 0 13px 5px;
+  /* text-align: center; */
+  
+}
+
+.header__theme-menu-button:hover{
+  outline: 0.5px solid #FF0070;
+}
+
+.header__theme-menu-button:focus{
+  outline: none;
+  border-bottom: 1px solid #FF0070;
+}
+
+.header__theme-menu-button_active{
+  border: 1px solid #FF0070;
+}
+
+.header__theme-menu-button_active:hover{
+  outline: none;
+}
+
+.accent-link{
+  font-family: var(--main-font), sans-serif;
+  text-shadow: 2px 2px 0px var(--accent-color);
+  text-decoration: none;
+}
+
+.accent-link:hover{
+  border-bottom: 1px solid  #F1B2CE;
+}
+
+.accent-link:focus{
+  outline: none;
+  border-bottom: 1px solid #FF0070;
+}
+
+
+.header{
+  /**/
+  height: 99vh;
+  position: relative;
+  box-sizing: content-box;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+}
+
+.header__theme-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px ;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  gap: 20px;
+}
+
+
+.header__theme-menu-button{
+  text-transform: lowercase;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+  color: var(--accent-color);
+  font-family: var(--main-font), sans-serif;
+}
+
+.header__content{
+  display: grid;
+  grid-template-rows:  repeat(1fr);
+  height: calc(100% - 20px);
+}
+
+
+.header__content-heading{
+  display:inline;
+  color: var(--heading-color);
+  font-family: var(--main-font), sans-serif;
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  align-self: end;
+}
+
+.header__content-text{
+  /* display:inline; */
+  display: block;
+  color: var(--header-color);
+  background-color: var(--accent-color);
+  font-family: var(--main-font),sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  max-width: 491px;
+  height: 71px;
+  align-self: center;
+  margin-right: 20px;
+  justify-self: flex-end;
+}
+  
+
+.rec{
+  font-family: var(--main-font),sans-serif;
+  position: absolute;
+  color: var(--accent-color);
+  top: 20px;
+  right: 48px;
+  text-transform: uppercase;
+  display: flex;
+  display: var(--display-state);
+  text-align: center;
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.rec::after{
+  /* content: url('../images/favicon.svg'); */
+  content: "";
+  background-color: var(--accent-color) ;
+  position: relative;
+  top: 9px;
+  left: 17px; 
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-radius: 50px;
+
+}
+
+.right{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.right::after{
+  content: "";
+  position: relative;
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-width: 2px 2px 0 0 ; 
+  border-style: solid;
+  border-color: var(--accent-color);
+}
+
+ .left{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.left::before{
+  content: "";
+  position: relative;
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-width: 0 0 2px 2px ; 
+  border-style: solid;
+  border-color: var(--accent-color);
+}
+
+
+.main{
+  background-color: var(--bg-color);
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 70px;
+}
+
+.main__causes{
+  
+  display: grid;
+  grid-template-areas:
+  "heading multi-head"
+  "heading multi-text"
+  "- dophamine-head"
+  "- dophamine-text";
+  grid-template-columns:  1fr 2fr;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.header-multi-task{
+  background-color: var(--accent-color);
+  height: 23px;
+  color: var(--header-color);
+  grid-area: multi-head;
+  font-size: 18px;
+}
+
+.multi-task{
+  grid-area: multi-text;
+  color: var(--text-color);
+}
+
+.header-dophamine{
+  color: var(--header-color);
+  background-color: var(--accent-color);
+  grid-area: dophamine-head;
+  height: 23px;
+  font-size: 18px;
+}
+
+.dophamine{
+  grid-area: dophamine-text;
+  color: var(--text-color);
+}
+
+.main__causes-heading{
+  color: var(--high-header-color);
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  grid-area: heading;
+}
+
+
+.main__attention{
+  display: grid;
+  grid-template-areas: 
+  "attention-heading - -"
+  "header-concentration header-food header-gadgets"
+  "concentration food gadgets"; 
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 20px;
+
+}
+
+.main__attention-heading{
+  color: var(--high-header-color);
+  grid-area: attention-heading;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; 
+}
+
+.header-concentration{
+  font-size: 18px;
+  background-color: var(--accent-color); 
+  color: var(--header-color);
+  grid-area: header-concentration;
+}
+
+.concentration{
+  grid-area: concentration;
+  color: var(--text-color);
+}
+
+.header-food{
+  background-color: var(--accent-color);
+  color: var(--header-color);
+  grid-area:header-food;
+  font-size: 18px;
+}
+
+.food{
+  grid-area: food;
+  color: var(--text-color);
+}
+
+.header-gadgets{
+  background-color: var(--accent-color);
+  color: var(--header-color);
+  grid-area: header-gadgets;
+  font-size: 18px;
+}
+
+.gadgets{
+  grid-area: gadgets;
+  color: var(--text-color);
+}
+
+.main__concentration{
+  display: grid;
+  grid-template-areas: 
+  "concentration-heading advice-head"
+  "concentration-heading cloud-head"
+  "- cloud-text"
+  "- music-head"
+  "- music-text"
+  "- walk-head"
+  "- walk-text"
+  "- eat-head"
+  "- eat-text"
+  "- read-head"
+  "- read-text";
+  grid-template-columns:  1fr 2fr;
+  gap: 10px;
+}
+
+.gap-extended{
+  margin-bottom: 10px;
+}
+
+.main__concentration-heading{
+  font-size: 18px;
+  color: var( --high-header-color);
+  grid-area: concentration-heading;
+}
+/* 
+.main__concentration>h2{
+  gap: 10px;
+} */
+
+.head{
+  color: var(--header-color);
+  background-color: var(--accent-color);
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+  height: 23px;
+}
+
+.advice-head{
+  color: var(--header-color);
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  grid-area: concentration-heading;
+  background-color: var(--accent-color);
+  grid-area: advice-head;
+  height: 23px;
+}
+
+.cloud-head{
+  grid-area: cloud-head;
+ 
+}
+
+.cloud-text{
+  grid-area: cloud-text;
+  color: var(--text-color);
+}
+
+
+.music-head{
+  grid-area: music-head;
+  
+}
+
+.music-text{
+  grid-area: music-text;
+  color: var(--text-color);
+}
+
+
+.walk-head{
+  grid-area: walk-head;
+}
+
+.walk-text{
+  grid-area: walk-text;
+  color: var(--text-color);
+}
+
+
+.eat-head{
+  grid-area: eat-head;
+}
+
+.eat-text{
+  grid-area: eat-text;
+  color: var(--text-color);
+}
+
+
+.read-head{
+  grid-area: read-head;
+}
+
+.read-text{
+  grid-area: read-text;
+  color: var(--text-color);
+}
+
+.main__gallery{
+  display: grid;
+  grid-template-areas: 
+  "gallery-header gallery-header gallery-header"
+  "sunset sunset ice_cream"
+  "tape books ice_cream"
+  "tape street street";
+  max-width: 1024px;
+  gap: 25px;
+
+}
+
+.main__gallery-header{
+  background-color: var(--accent-color);
+  color: var(--header-color);
+  grid-area: gallery-header;
+  font-size: 18px;
+}
+
+.main__gallery-sunset{
+  grid-area: sunset;
+  background-size: cover;
+  background-size: cover; /* Изображение растягивается, чтобы полностью покрыть блок */
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.main__gallery-ice_cream{
+ grid-area: ice_cream;
+ background-size: cover;
+ background-size: cover; /* Изображение растягивается, чтобы полностью покрыть блок */
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.main__gallery-tape{
+  grid-area: tape;
+  background-size: cover;
+  background-size: cover; /* Изображение растягивается, чтобы полностью покрыть блок */
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.main__gallery-books{
+  grid-area: books;
+  background-size: cover;
+  background-size: cover; /* Изображение растягивается, чтобы полностью покрыть блок */
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.main__gallery-street{
+  grid-area: street;
+  background-size: cover;
+  background-size: cover; /* Изображение растягивается, чтобы полностью покрыть блок */
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.footer{
+  display: grid;
+  grid-template-areas: 
+  "- - -"
+  "- no-focus -"
+  "- - -";
+  background-color: var(--bg-color);
+  height: 100vh;
+  position: relative;
+} 
+
+.footer__header{
+  grid-area: no-focus;
+  align-self: normal;
+}
+
+
+
+
+.header__content{
+  display: grid;
+  grid-template-rows:  repeat(1fr);
+  height: calc(100% - 20px);
+}
+
+
+
+@media screen and (max-width: 768px){
+  .header__theme-menu-list{
+    position: absolute;
+    top: 192px;
+    right: 20px;
+    flex-direction: column;
+  }
+
+  .main__attention{
+    grid-template-areas: 
+    "attention-heading - -"
+    "header-concentration header-concentration header-concentration"
+    "concentration concentration concentration"
+    "header-food header-food header-food"
+    "food food food"
+    "header-gadgets header-gadgets header-gadgets"
+    "gadgets gadgets gadgets"
+    ;
+  }
+}
+
+@media screen and (max-width: 376px){
+  .header__theme-menu-list{
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    flex-direction: column;
+  }
+
+  .header__content-text{
+    margin: 0 20px 0 20px;
+    height: 95px;
+  }
+
+  .main__causes{
+    grid-template-areas:
+        "heading"
+        "multi-head"
+        "multi-text"
+        "dophamine-head"
+        "dophamine-text";
+    grid-template-columns: 1fr;
+  }
+
+  .main__attention{
+    grid-template-areas: 
+    "attention-heading"
+    "header-concentration"
+    "concentration"
+    "header-food"
+    "food"
+    "header-gadgets"
+    "gadgets";
+    grid-template-columns: 1fr;
+  }
+
+  .main__concentration{
+    grid-template-areas:
+        "concentration-heading"
+        "advice-head"
+        "cloud-head"
+        "cloud-text"
+        "music-head"
+        "music-text"
+        "walk-head"
+        "walk-text"
+        "eat-head"
+        "eat-text"
+        "read-head"
+        "read-text";
+    grid-template-columns: 1fr;
+  }
+
+  .main__concentration-heading{
+    margin-bottom: 10px;
+  }
+
+  .advice-head{
+    height: 47px;
+  }
+
+  .main__gallery{
+    display: grid;
+    /* grid-template-areas: 
+    "gallery-header gallery-header gallery-header"
+    "sunset sunset ice_cream"
+    "tape books ice_cream"
+    "tape street street"; */
+    grid-template-areas: 
+      "gallery-header"
+      "sunset"
+      "ice_cream"
+      "tape"
+      "books"
+      "street";
+    grid-template-columns: 1fr;
+    max-width: 1024px;
+    gap: 25px;
+  }
+}
