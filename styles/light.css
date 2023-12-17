@@ -15,6 +15,7 @@
   --text-color: #353430;
   --heading-color: #ffc2e6;
   --high-header-color: #353430;
+  --outline-color: #353430;
   --display-state: none;
   --main-font: "IBM Plex Mono";
   --bg-image: url(../images/cover-image-light.png);
@@ -30,6 +31,7 @@
     --text-color: #353430;
     --heading-color: #ffc2e6;
     --high-header-color: #353430;
+    --outline-color: #353430;
     --display-state: none;
     --main-font: "IBM Plex Mono";
     --bg-image: url(../images/cover-image-light.png);

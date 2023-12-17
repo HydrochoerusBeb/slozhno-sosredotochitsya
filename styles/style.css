@@ -4,23 +4,17 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
-.header__theme-menu-button {
-  background-color: transparent;
-  border: none;
-  padding: 0 13px 5px;
-}
-
 .header__theme-menu-button:hover {
-  outline: 0.5px solid #ff0070;
+  outline: 0.5px solid var(--outline-color);
 }
 
 .header__theme-menu-button:focus {
   outline: none;
-  border-bottom: 1px solid #ff0070;
+  border-bottom: 1px solid var(--outline-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid #ff0070;
+  border: 1px solid var(--outline-color);
 }
 
 .header__theme-menu-button_active:hover {
@@ -70,7 +64,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  padding: 0 13px 5px;
+  color: var(--outline-color);
   font-family: var(--main-font), sans-serif;
 }
 
@@ -115,11 +112,9 @@
   top: 20px;
   right: 48px;
   text-transform: uppercase;
-  display: flex;
   display: var(--display-state);
   text-align: center;
   font-family: var(--main-font), sans-serif;
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
@@ -127,7 +122,7 @@
 
 .rec::after {
   content: "";
-  background-color: var(--accent-color);
+  background-color: var(--outline-color);
   position: relative;
   top: 9px;
   left: 17px;
@@ -151,7 +146,7 @@
   display: block;
   border-width: 2px 2px 0 0;
   border-style: solid;
-  border-color: var(--accent-color);
+  border-color: var(--outline-color);
 }
 
 .left {
@@ -168,7 +163,7 @@
   display: block;
   border-width: 0 0 2px 2px;
   border-style: solid;
-  border-color: var(--accent-color);
+  border-color: var(--outline-color);
 }
 
 .main {
@@ -328,7 +323,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
-  grid-area: concentration-heading;
   background-color: var(--accent-color);
   grid-area: advice-head;
   height: 23px;
@@ -397,50 +391,30 @@
   font-size: 18px;
 }
 
-.main__gallery-sunset {
-  grid-area: sunset;
+.main__gallery-style-copy{
   background-size: cover;
   background-size: cover;
   background-position: center;
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.main__gallery-sunset {
+  grid-area: sunset;
+
 }
 .main__gallery-ice_cream {
   grid-area: ice_cream;
-  background-size: cover;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .main__gallery-tape {
   grid-area: tape;
-  background-size: cover;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .main__gallery-books {
   grid-area: books;
-  background-size: cover;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .main__gallery-street {
   grid-area: street;
-  background-size: cover;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .footer {
