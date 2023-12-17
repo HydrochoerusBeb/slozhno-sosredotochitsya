@@ -11,17 +11,16 @@
   */
 }
 
-
 @media (prefers-color-scheme: light) {
-  .page{
-  --accent-color: #FF0070;
-  --bg-color: #000028;
-  --header-color: #000028;
-  --text-color: #F1B2CE;
-  --heading-color: #DB00FF;
-  --high-header-color: #FF0070;
-  --display-state: flex;
-  --main-font: 'IBM Plex Mono';
-  --bg-image: url(../images/cover-image-dark.png);
+  .page {
+    --accent-color: #ff0070;
+    --bg-color: #000028;
+    --header-color: #000028;
+    --text-color: #f1b2ce;
+    --heading-color: #db00ff;
+    --high-header-color: #ff0070;
+    --display-state: flex;
+    --main-font: "IBM Plex Mono";
+    --bg-image: url(../images/cover-image-dark.png);
   }
-  }
+}
