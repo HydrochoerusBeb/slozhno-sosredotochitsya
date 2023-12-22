@@ -4,6 +4,18 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
+body{
+  background-image: var(--bg-image);
+  /* background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+
 .header__theme-menu-button:hover {
   outline: 0.5px solid var(--outline-color);
 }
@@ -37,13 +49,9 @@
 }
 
 .header {
-  height: 99vh;
+  height: 100vh;
   position: relative;
   box-sizing: content-box;
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .header__theme-menu {
@@ -69,11 +77,11 @@
   padding: 0 13px 5px;
   color: var(--outline-color);
   font-family: var(--main-font), sans-serif;
+  cursor: pointer;
 }
 
 .header__content {
   display: grid;
-  grid-template-rows: repeat(1fr);
   height: calc(100% - 20px);
 }
 
@@ -167,7 +175,6 @@
 }
 
 .main {
-  background-color: var(--bg-color);
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -423,7 +430,7 @@
     "- - -"
     "- no-focus -"
     "- - -";
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   height: 100vh;
   position: relative;
 }
@@ -432,19 +439,41 @@
   grid-area: no-focus;
   align-self: normal;
 }
-
+/* 
 .header__content {
   display: grid;
-  grid-template-rows: repeat(1fr);
   height: calc(100% - 20px);
-}
+} */
 
 @media screen and (max-width: 768px) {
-  .header__theme-menu-list {
-    position: absolute;
-    top: 192px;
-    right: 20px;
+
+  .header{
+
+    display: grid;
+    grid-template-areas:
+    'nav'
+    'content' ;
+    grid-template-rows: 33% 67%;
+  }
+
+  .header__theme-menu{
+    grid-area: nav;
+    align-self: end;
+    justify-self: end;
+    margin-right: 20px;
+    margin-bottom: 35px;
+  }
+
+  .header__content-content{
+    grid-area: content;
+  }
+
+  .header__theme-menu-list{
     flex-direction: column;
+  }
+
+  .header__content-heading{
+    align-self: center;
   }
 
   .main__attention {
@@ -456,6 +485,16 @@
       "food food food"
       "header-gadgets header-gadgets header-gadgets"
       "gadgets gadgets gadgets";
+  }
+
+  .footer{
+    grid-template-areas:
+    'no-focus';
+  }
+
+  .footer__header{
+    align-self: center;
+    justify-self: center;
   }
 }
 

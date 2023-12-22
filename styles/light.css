@@ -24,7 +24,7 @@
 /* Остальные стили */
 
 @media (prefers-color-scheme: light) {
-  .page {
+  :root {
     --accent-color: rgba(255, 141, 203, 1);
     --bg-color: #fff1f7;
     --header-color: var(--text-color);
